@@ -247,6 +247,6 @@ void func_12(char* sParam0)
 
 int func_13()
 {
-	return UNK_0xB01F55A0FD1CFD49("SPLASH_TEXT");
+	return UNK_0x5DEA4192B46CB99B("SPLASH_TEXT");
 }
 

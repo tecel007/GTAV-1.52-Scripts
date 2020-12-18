@@ -44,11 +44,11 @@ void __EntryFunction__()
 	sLocal_20 = "NULL";
 	while (true)
 	{
-		if (func_7() || Global_1686701 == 1)
+		if (func_7() || Global_1688724 == 1)
 		{
 			func_6();
 		}
-		if (func_1(&uLocal_21, &Global_291130))
+		if (func_1(&uLocal_21, &Global_292399))
 		{
 			func_6();
 		}
@@ -105,7 +105,7 @@ int func_1(var uParam0, var uParam1)
 									uParam0->f_1 = MISC::GET_GAME_TIMER();
 								}
 							}
-							else if (NETWORK::NETWORK_ACCESS_TUNABLE_INT_HASH(iVar12, Var3.f_5, &iVar1))
+							else if (UNK_0x51B3C61D5006765B(iVar12, Var3.f_5, &iVar1))
 							{
 								if (iVar1 > Var3.f_3 || iVar1 < Var3.f_2)
 								{
@@ -18961,11 +18961,11 @@ void func_2(int iParam0, var uParam1)
 
 int func_3()
 {
-	if (Global_2457997)
+	if (Global_2459539)
 	{
 		return 32;
 	}
-	return (32 - Global_2457998);
+	return (32 - Global_2459540);
 }
 
 int func_4(int iParam0)
@@ -19061,7 +19061,7 @@ int func_7()
 	var uVar0;
 
 	func_15(&uVar0);
-	if (Global_1312854 == 0)
+	if (Global_1312872 == 0)
 	{
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		{
@@ -19072,7 +19072,7 @@ int func_7()
 	{
 		return 1;
 	}
-	if (Global_2462922)
+	if (Global_2464493)
 	{
 		return 1;
 	}
@@ -19119,7 +19119,7 @@ int func_8()
 
 int func_9()
 {
-	switch (Global_2463024)
+	switch (Global_2464595)
 	{
 		case 0:
 			return joaat("FREEMODE");
@@ -19131,12 +19131,12 @@ int func_9()
 
 int func_10()
 {
-	return Global_30768;
+	return Global_30968;
 }
 
 bool func_11()
 {
-	return Global_2450632.f_598;
+	return Global_2451787.f_696;
 }
 
 int func_12(int iParam0)
@@ -19150,12 +19150,12 @@ int func_12(int iParam0)
 
 bool func_13()
 {
-	return Global_2460680;
+	return Global_2462250;
 }
 
 bool func_14()
 {
-	return Global_2450632.f_593;
+	return Global_2451787.f_691;
 }
 
 void func_15(var uParam0)
@@ -19174,12 +19174,12 @@ void func_15(var uParam0)
 			SCRIPT::GET_EVENT_DATA(1, iVar0, &iVar2, 2);
 			switch (iVar2)
 			{
-				case -1853120870:
+				case 1035596089:
 					func_16(iVar0);
 					break;
-				case 589125870:
+				case 1120313136:
 					SCRIPT::GET_EVENT_DATA(1, iVar0, &vVar4, 4);
-					if (vVar4.z == 653923311)
+					if (vVar4.z == 397890833)
 					{
 						*uParam0 = 1;
 					}
@@ -19268,7 +19268,7 @@ int func_18(int iParam0, bool bParam1, bool bParam2)
 			}
 			if (bParam2)
 			{
-				if (!Global_2439138.f_3[iVar0])
+				if (!Global_2440049.f_3[iVar0])
 				{
 					return 0;
 				}

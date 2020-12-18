@@ -78,24 +78,24 @@ void __EntryFunction__()
 		}
 		while (iVar1 != 2)
 		{
-			if (func_13(&(Global_31107[iVar0 /*7*/])))
+			if (func_13(&(Global_31307[iVar0 /*7*/])))
 			{
 				if (func_12(iVar0, vVar2))
 				{
-					func_11(&(Global_31107[iVar0 /*7*/]), 2);
-					if (Global_31107[iVar0 /*7*/].f_5 != 0)
+					func_11(&(Global_31307[iVar0 /*7*/]), 2);
+					if (Global_31307[iVar0 /*7*/].f_5 != 0)
 					{
-						if (SCRIPT::IS_THREAD_ACTIVE(Global_31107[iVar0 /*7*/].f_5))
+						if (SCRIPT::IS_THREAD_ACTIVE(Global_31307[iVar0 /*7*/].f_5))
 						{
-							PLAYER::FORCE_CLEANUP_FOR_THREAD_WITH_THIS_ID(Global_31107[iVar0 /*7*/].f_5, 1);
+							PLAYER::FORCE_CLEANUP_FOR_THREAD_WITH_THIS_ID(Global_31307[iVar0 /*7*/].f_5, 1);
 						}
-						Global_31107[iVar0 /*7*/].f_5 = 0;
+						Global_31307[iVar0 /*7*/].f_5 = 0;
 					}
 				}
 			}
-			else if (!func_10(Global_31107[iVar0 /*7*/], 4))
+			else if (!func_10(Global_31307[iVar0 /*7*/], 4))
 			{
-				if (func_5(&(Global_31107[iVar0 /*7*/]), vVar2))
+				if (func_5(&(Global_31307[iVar0 /*7*/]), vVar2))
 				{
 					func_1(iVar0);
 				}
@@ -112,7 +112,7 @@ void __EntryFunction__()
 
 void func_1(int iParam0)
 {
-	char* sVar0;
+	void fVar0;
 	int iVar1;
 	int iVar2;
 	bool bVar3;
@@ -122,28 +122,28 @@ void func_1(int iParam0)
 	switch (iParam0)
 	{
 		case 0:
-			sVar0 = "re_ArmyBase";
+			fVar0 = "re_ArmyBase";
 			iVar1 = joaat("RE_ARMYBASE");
 			break;
 		case 1:
 			iVar2 = 4500;
-			sVar0 = "golf_ai_foursome";
+			fVar0 = "golf_ai_foursome";
 			iVar1 = joaat("GOLF_AI_FOURSOME");
 			bVar3 = false;
 			break;
 		case 3:
-			sVar0 = "re_Prison";
+			fVar0 = "re_Prison";
 			iVar1 = joaat("RE_PRISON");
 			break;
 		case 2:
 			iVar2 = 4500;
-			sVar0 = "golf_ai_foursome_putting";
+			fVar0 = "golf_ai_foursome_putting";
 			iVar1 = joaat("GOLF_AI_FOURSOME_PUTTING");
 			bVar3 = false;
 			break;
 		case 4:
 			iVar2 = 2050;
-			sVar0 = "stripclub";
+			fVar0 = "stripclub";
 			iVar1 = joaat("STRIPCLUB");
 			bVar3 = false;
 			break;
@@ -152,20 +152,20 @@ void func_1(int iParam0)
 	{
 		return;
 	}
-	if (HUD::GET_LENGTH_OF_LITERAL_STRING(sVar0) != 0)
+	if (UNK_0x984EC4F65F95F1DF(fVar0) != 0)
 	{
 		if (SCRIPT::_GET_NUMBER_OF_REFERENCES_OF_SCRIPT_WITH_NAME_HASH(iVar1) == 0)
 		{
-			SCRIPT::REQUEST_SCRIPT(sVar0);
-			while (!SCRIPT::HAS_SCRIPT_LOADED(sVar0))
+			SCRIPT::REQUEST_SCRIPT(fVar0);
+			while (!SCRIPT::HAS_SCRIPT_LOADED(fVar0))
 			{
 				SYSTEM::WAIT(0);
 			}
-			Global_31107[iParam0 /*7*/].f_5 = SYSTEM::START_NEW_SCRIPT(sVar0, iVar2);
-			SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(sVar0);
-			if (Global_31107[iParam0 /*7*/].f_5 != 0)
+			Global_31307[iParam0 /*7*/].f_5 = SYSTEM::START_NEW_SCRIPT(fVar0, iVar2);
+			SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(fVar0);
+			if (Global_31307[iParam0 /*7*/].f_5 != 0)
 			{
-				func_2(&(Global_31107[iParam0 /*7*/]), 2);
+				func_2(&(Global_31307[iParam0 /*7*/]), 2);
 			}
 		}
 	}
@@ -187,7 +187,7 @@ int func_3()
 
 int func_4()
 {
-	return Global_30768;
+	return Global_30968;
 }
 
 int func_5(var uParam0, vector3 vParam1)
@@ -215,7 +215,7 @@ int func_5(var uParam0, vector3 vParam1)
 
 int func_6(int iParam0)
 {
-	if (Global_41431 == 15)
+	if (Global_41631 == 15)
 	{
 		return 0;
 	}
@@ -228,7 +228,7 @@ int func_6(int iParam0)
 
 bool func_7(int iParam0)
 {
-	return func_8(iParam0, Global_41431);
+	return func_8(iParam0, Global_41631);
 }
 
 int func_8(int iParam0, int iParam1)
@@ -354,7 +354,7 @@ int func_8(int iParam0, int iParam1)
 
 int func_9()
 {
-	if (Global_41431 == 15)
+	if (Global_41631 == 15)
 	{
 		return 0;
 	}
@@ -374,17 +374,17 @@ void func_11(var uParam0, int iParam1)
 int func_12(int iParam0, vector3 vParam1)
 {
 	vParam1.f_2 = 0f;
-	if (!SCRIPT::IS_THREAD_ACTIVE(Global_31107[iParam0 /*7*/].f_5))
+	if (!SCRIPT::IS_THREAD_ACTIVE(Global_31307[iParam0 /*7*/].f_5))
 	{
 		return 1;
 	}
-	if (func_10(Global_31107[iParam0 /*7*/], 4))
+	if (func_10(Global_31307[iParam0 /*7*/], 4))
 	{
 		return 1;
 	}
 	if (func_9() && !func_6(6))
 	{
-		if (!func_10(Global_31107[iParam0 /*7*/], 1))
+		if (!func_10(Global_31307[iParam0 /*7*/], 1))
 		{
 			if (iParam0 == 1 || iParam0 == 2)
 			{
@@ -399,7 +399,7 @@ int func_12(int iParam0, vector3 vParam1)
 			}
 		}
 	}
-	if (SYSTEM::VDIST2(Global_31107[iParam0 /*7*/].f_2, vParam1) > (Global_31107[iParam0 /*7*/].f_1 + 400f))
+	if (SYSTEM::VDIST2(Global_31307[iParam0 /*7*/].f_2, vParam1) > (Global_31307[iParam0 /*7*/].f_1 + 400f))
 	{
 		return 1;
 	}
@@ -415,30 +415,30 @@ void func_14()
 {
 	int iVar0;
 
-	Global_31107[0 /*7*/].f_2 = { -2189.545f, 3129.613f, 0f };
-	Global_31107[0 /*7*/].f_1 = (1000f * 1000f);
-	Global_31107[0 /*7*/] = 0;
-	Global_31107[0 /*7*/].f_5 = 0;
-	Global_31107[1 /*7*/].f_2 = { -1172.822f, 66.5235f, 0f };
-	Global_31107[1 /*7*/].f_1 = (300f * 300f);
-	Global_31107[1 /*7*/] = 0;
-	Global_31107[1 /*7*/].f_5 = 0;
-	Global_31107[3 /*7*/].f_2 = { 1692.147f, 2562.313f, 0f };
-	Global_31107[3 /*7*/].f_1 = (300f * 300f);
-	Global_31107[3 /*7*/] = 0;
-	Global_31107[3 /*7*/].f_5 = 0;
-	Global_31107[2 /*7*/].f_2 = { -1329.68f, 60.3478f, 0f };
-	Global_31107[2 /*7*/].f_1 = (250f * 250f);
-	Global_31107[2 /*7*/] = 0;
-	Global_31107[2 /*7*/].f_5 = 0;
-	Global_31107[4 /*7*/].f_2 = { 114.64f, -1290.34f, 0f };
-	Global_31107[4 /*7*/].f_1 = (100f * 100f);
-	Global_31107[4 /*7*/] = 1;
-	Global_31107[4 /*7*/].f_5 = 0;
+	Global_31307[0 /*7*/].f_2 = { -2189.545f, 3129.613f, 0f };
+	Global_31307[0 /*7*/].f_1 = (1000f * 1000f);
+	Global_31307[0 /*7*/] = 0;
+	Global_31307[0 /*7*/].f_5 = 0;
+	Global_31307[1 /*7*/].f_2 = { -1172.822f, 66.5235f, 0f };
+	Global_31307[1 /*7*/].f_1 = (300f * 300f);
+	Global_31307[1 /*7*/] = 0;
+	Global_31307[1 /*7*/].f_5 = 0;
+	Global_31307[3 /*7*/].f_2 = { 1692.147f, 2562.313f, 0f };
+	Global_31307[3 /*7*/].f_1 = (300f * 300f);
+	Global_31307[3 /*7*/] = 0;
+	Global_31307[3 /*7*/].f_5 = 0;
+	Global_31307[2 /*7*/].f_2 = { -1329.68f, 60.3478f, 0f };
+	Global_31307[2 /*7*/].f_1 = (250f * 250f);
+	Global_31307[2 /*7*/] = 0;
+	Global_31307[2 /*7*/].f_5 = 0;
+	Global_31307[4 /*7*/].f_2 = { 114.64f, -1290.34f, 0f };
+	Global_31307[4 /*7*/].f_1 = (100f * 100f);
+	Global_31307[4 /*7*/] = 1;
+	Global_31307[4 /*7*/].f_5 = 0;
 	iVar0 = 0;
 	while (iVar0 <= (5 - 1))
 	{
-		Global_31107[iVar0 /*7*/].f_2.f_2 = 0f;
+		Global_31307[iVar0 /*7*/].f_2.f_2 = 0f;
 		iVar0++;
 	}
 }

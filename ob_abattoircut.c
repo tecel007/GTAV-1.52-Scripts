@@ -56,7 +56,7 @@ void __EntryFunction__()
 void func_1()
 {
 	func_2("ob_abattoir Terminated >>>>>>>>>>>>>>>>>\n");
-	STREAMING::REMOVE_ANIM_DICT("MISSMIC2");
+	UNK_0x1082C25039B168F8("MISSMIC2");
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
 

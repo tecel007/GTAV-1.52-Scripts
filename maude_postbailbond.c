@@ -430,24 +430,24 @@ void func_16(bool bParam0)
 
 void func_17()
 {
-	Global_19671 = 0;
+	Global_19871 = 0;
 	func_18();
 }
 
 void func_18()
 {
 	AUDIO::RESTART_SCRIPTED_CONVERSATION();
-	Global_21816 = 0;
+	Global_22016 = 0;
 	if (AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 	{
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
-		Global_20805 = 6;
+		Global_21005 = 6;
 	}
 }
 
 void func_19()
 {
-	Global_19671 = 0;
+	Global_19871 = 0;
 	func_20();
 }
 
@@ -456,28 +456,28 @@ void func_20()
 	if (AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 	{
 		AUDIO::RESTART_SCRIPTED_CONVERSATION();
-		Global_21816 = 0;
+		Global_22016 = 0;
 		AUDIO::STOP_SCRIPTED_CONVERSATION(true);
-		Global_20805 = 6;
+		Global_21005 = 6;
 		return;
 	}
 }
 
 char* func_21()
 {
-	if (MISC::IS_BIT_SET(Global_111638.f_24981, 3))
+	if (MISC::IS_BIT_SET(Global_111858.f_24982, 3))
 	{
 		return "BB4_loiter";
 	}
-	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 2))
+	else if (MISC::IS_BIT_SET(Global_111858.f_24982, 2))
 	{
 		return "BB3_loiter";
 	}
-	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 1))
+	else if (MISC::IS_BIT_SET(Global_111858.f_24982, 1))
 	{
 		return "BB2_loiter";
 	}
-	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 0))
+	else if (MISC::IS_BIT_SET(Global_111858.f_24982, 0))
 	{
 		return "BB1_loiter";
 	}
@@ -489,16 +489,16 @@ struct<6> func_22()
 	struct<6> Var0;
 
 	StringCopy(&Var0, "NULL", 24);
-	if (Global_20805 == 4)
+	if (Global_21005 == 4)
 	{
-		return Global_20424;
+		return Global_20624;
 	}
 	return Var0;
 }
 
 int func_23()
 {
-	if (Global_20805 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
+	if (Global_21005 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 	{
 		return 1;
 	}
@@ -1097,54 +1097,54 @@ void func_44(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4
 			iParam3 = 7;
 		}
 	}
-	MISC::SET_BIT(&Global_19671, 0);
-	Global_20808 = iParam3;
-	StringCopy(&Global_20795, sParam2, 24);
+	MISC::SET_BIT(&Global_19871, 0);
+	Global_21008 = iParam3;
+	StringCopy(&Global_20995, sParam2, 24);
 }
 
 void func_45(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5)
 {
-	Global_20259 = { *uParam0 };
-	Global_6672 = iParam1;
-	StringCopy(&Global_20875, sParam2, 24);
-	Global_21794 = iParam5;
+	Global_20459 = { *uParam0 };
+	Global_6867 = iParam1;
+	StringCopy(&Global_21075, sParam2, 24);
+	Global_21994 = iParam5;
 	if (iParam3 == 0)
 	{
-		Global_21792 = 1;
-		Global_21790 = 0;
+		Global_21992 = 1;
+		Global_21990 = 0;
 	}
 	else
 	{
-		Global_21792 = 0;
-		Global_21790 = 1;
+		Global_21992 = 0;
+		Global_21990 = 1;
 	}
 	if (iParam4 == 0)
 	{
-		Global_21793 = 1;
-		Global_21791 = 0;
+		Global_21993 = 1;
+		Global_21991 = 0;
 	}
 	else
 	{
-		Global_21793 = 0;
-		Global_21791 = 1;
+		Global_21993 = 0;
+		Global_21991 = 1;
 	}
 }
 
 char* func_46()
 {
-	if (MISC::IS_BIT_SET(Global_111638.f_24981, 3))
+	if (MISC::IS_BIT_SET(Global_111858.f_24982, 3))
 	{
 		return "BB4AUD";
 	}
-	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 2))
+	else if (MISC::IS_BIT_SET(Global_111858.f_24982, 2))
 	{
 		return "BB3AUD";
 	}
-	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 1))
+	else if (MISC::IS_BIT_SET(Global_111858.f_24982, 1))
 	{
 		return "BB2AUD";
 	}
-	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 0))
+	else if (MISC::IS_BIT_SET(Global_111858.f_24982, 0))
 	{
 		return "BB1AUD";
 	}
@@ -1161,7 +1161,7 @@ void func_47(var uParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	(uParam0[iParam1 /*10*/])->f_7 = 1;
 	(uParam0[iParam1 /*10*/])->f_8 = iParam4;
 	(uParam0[iParam1 /*10*/])->f_9 = iParam5;
-	if (!Global_76622)
+	if (!Global_76833)
 	{
 		if (!PED::IS_PED_INJURED(iParam2))
 		{
@@ -1215,19 +1215,19 @@ void func_48(bool bParam0, var uParam1)
 
 int func_49()
 {
-	if (MISC::IS_BIT_SET(Global_111638.f_24981, 3))
+	if (MISC::IS_BIT_SET(Global_111858.f_24982, 3))
 	{
 		return 4;
 	}
-	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 2))
+	else if (MISC::IS_BIT_SET(Global_111858.f_24982, 2))
 	{
 		return 4;
 	}
-	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 1))
+	else if (MISC::IS_BIT_SET(Global_111858.f_24982, 1))
 	{
 		return 4;
 	}
-	else if (MISC::IS_BIT_SET(Global_111638.f_24981, 0))
+	else if (MISC::IS_BIT_SET(Global_111858.f_24982, 0))
 	{
 		return 3;
 	}
@@ -1344,7 +1344,7 @@ int func_53(int iParam0)
 
 var func_54(int iParam0)
 {
-	return Global_1798[iParam0 /*29*/];
+	return Global_1848[iParam0 /*29*/];
 }
 
 bool func_55(int iParam0)
@@ -1386,7 +1386,7 @@ void func_56()
 		PED::SET_PED_CONFIG_FLAG(iLocal_82, 118, true);
 	}
 	func_57(&iLocal_82, 1, 0, 1);
-	STREAMING::REMOVE_ANIM_DICT(func_11());
+	UNK_0x1082C25039B168F8(func_11());
 	SCRIPT::TERMINATE_THIS_THREAD();
 }
 
